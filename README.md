@@ -21,14 +21,14 @@ For teach the Brunch to track any Hugo folders and files you need to override th
 module.exports = {
   ...
   conventions: {
-    ignored: [/vendor\/(node|j?ruby-.+|bundle)\//]
+    ignored: [/\/_(?!default|index)/, /vendor\/(node|j?ruby-.+|bundle)\//]
   },
   ...
 }
 ```
-By default Brunch has these rules for ignore the tracking of some file types: `[/\/_/, /vendor\/(node|j?ruby-.+|bundle)\//]`. In this case we omit the `/\/_/` rule and leave the second rule in our configuration above.
+By default Brunch has these rules for ignore the tracking of some file types: `[/\/_/, /vendor\/(node|j?ruby-.+|bundle)\//]`. In the configuration above we updated the `/\/_/` rule and leaves the second rule as is.
 
-To work with the `hugo-brunch` plugin you need to define the required `sourceFolder` field. This field must point to your Hugo folder. You can set it in this way:
+To work with the `hugo-brunch` plugin you need to define the required `sourceFolder` field. This field must point to your Hugo folder. You can setup it in this way:
 
 ```js
 module.exports = {
@@ -41,7 +41,7 @@ module.exports = {
 ```
 **That's all you need for a basic configuration.**
 ## Defaults
-The `brunch-plugin` relies on the following default options:
+The `hugo-brunch` relies on the following default options:
 ```js
 module.exports = {
   ...
@@ -49,9 +49,10 @@ module.exports = {
     hugo: {
       sourceFolder: '',
       outputFolder: 'public',
-      executablePath: 'node_modules/hugo-brunch/node_modules/hugo-bin/vendor/hugo',
+      executablePath: 'node_modules/hugo-bin/vendor/hugo',
       args: ['-DFv'],
-      fileExtensions: ['html','ace','amber','toml','yaml','json','md','png','jpg','jpeg','ico','eot','svg','ttf','woff']
+      fileExtensions: ['html','ace','amber','toml','yaml','json','md',
+                      'png','jpg','jpeg','ico','eot','svg','ttf','woff']
     }
   },
   ...
@@ -69,6 +70,9 @@ module.exports = {
 
 **Warning**
 All changed values in the Brunch config file will override the default values of plugin. In some cases this can lead to unexpected results when the Hugo will generate a website. If you need to expand abilities of options you can combine your values with defaults. Please make sure you know what you are doing by follow the [Hugo docs](https://gohugo.io/commands/hugo/).
+
+## Examples
+https://github.com/sfexample/hugo-init
 
 ## License
 MIT License
