@@ -26,7 +26,7 @@ module.exports = {
   ...
 }
 ```
-By default Brunch has these rules for ignore the tracking of some file types: `[/\/_/, /vendor\/(node|j?ruby-.+|bundle)\//]`. In the configuration above we updated the `/\/_/` rule and leaves the second rule as is.
+By default Brunch has these rules for ignore the tracking of some file types: `[/\/_/, /vendor\/(node|j?ruby-.+|bundle)\//]`. In the configuration above we have updated the `/\/_/` rule and leaves the second rule as is.
 
 To work with the `hugo-brunch` plugin you need to define the required `sourceFolder` field. This field must point to your Hugo folder. You can setup it in this way:
 
@@ -50,7 +50,7 @@ module.exports = {
       sourceFolder: '',
       outputFolder: 'public',
       executablePath: 'node_modules/hugo-bin/vendor/hugo',
-      args: ['-DFv'],
+      args: ['--buildDrafts','--buildFuture','--verbose'],
       fileExtensions: ['html','ace','amber','toml','yaml','json','md',
                       'png','jpg','jpeg','ico','eot','svg','ttf','woff']
     }
@@ -64,7 +64,7 @@ module.exports = {
 
 `executablePath` (optional) Alternative location of the Hugo execution file.
 
-`args` (optional) The arguments, that will be used during Hugo execution. The defaults for development is `['-DFv']`, for production - `['-v']`.
+`args` (optional) The arguments, that will be used during Hugo execution. The defaults for development is `['--buildDrafts','--buildFuture','--verbose']`, for production - `['--verbose']`.
 
 `fileExtensions` (optional) The plugin will watch the changes in files with these extensions. This option will be applied only for files in a folder defined in the `sourceFolder` value.
 
@@ -73,6 +73,11 @@ All changed values in the Brunch config file will override the default values of
 
 ## Examples
 https://github.com/sfexample/hugo-init
+
+## Thanks
+- To the [Brunch team](https://github.com/brunch/brunch/graphs/contributors) and all related contributors.
+- To the [Hugo folks](https://github.com/gohugoio/hugo/graphs/contributors) and all related contributors.
+- To [Shun Sato](https://github.com/satoshun00) for the [`hugo-bin`](https://www.npmjs.com/package/hugo-bin) package.
 
 ## License
 MIT License
