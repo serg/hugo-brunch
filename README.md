@@ -9,7 +9,7 @@ Or, do manual install:
 
 * Add `"hugo-brunch": "x.y.z"` to `package.json` of your brunch app.
 * If you want to use git version of plugin, use the GitHub URI
-`"hugo-brunch": "git+ssh://git@github.com:sfexample/hugo-brunch.git"`.
+`"hugo-brunch": "git+ssh://git@github.com:serg/hugo-brunch.git"`.
 
 Put the folder with the Hugo assets into the `app/` folder. The path for this folder can be for e.g. `app/your-hugo-folder/`. You can name the Hugo assets folder as you wish.
 
@@ -72,7 +72,7 @@ module.exports = {
 All changed values in the Brunch config file will override the default values of plugin. In some cases this can lead to unexpected results when the Hugo will generate a website. If you need to expand abilities of options you can combine your values with defaults. Please make sure you know what you are doing by follow the [Hugo docs](https://gohugo.io/commands/hugo/).
 
 ## Examples
-https://github.com/sfexample/hugo-init
+https://github.com/serg/hugo-init
 
 ## Thanks
 - To the [Brunch team](https://github.com/brunch/brunch/graphs/contributors) and all related contributors.
