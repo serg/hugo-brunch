@@ -1,6 +1,5 @@
 # hugo-brunch
 Adds [Hugo](https://gohugo.io) support to [Brunch](http://brunch.io).
-By using this plugin you understand the implications and guarantees of the [MIT license](https://github.com/serg/hugo-brunch/blob/master/LICENSE).
 
 ## Usage
 Install the plugin via npm with `npm install --save-dev hugo-brunch`.
@@ -64,15 +63,16 @@ module.exports = {
 
 `executablePath` (optional) Alternative location of the Hugo execution file.
 
-`args` (optional) The arguments, that will be used during Hugo execution. The defaults for development is `['--buildDrafts','--buildFuture','--verbose']`, for production - `['--verbose']`.
+`args` (optional) The arguments, that will be used during Hugo execution. The defaults for development mode is `['--buildDrafts','--buildFuture','--verbose']`, for production - `['--verbose']`. ***Please notice:*** when you override this option your arguments will be applied to both modes - for the development and for the production.
 
 `fileExtensions` (optional) The plugin will watch the changes in files with these extensions. This option will be applied only for files in a folder defined in the `sourceFolder` value.
 
 **Warning**
+
 All changed values in the Brunch config file will override the default values of plugin. In some cases this can lead to unexpected results when the Hugo will generate a website. If you need to expand abilities of options you can combine your values with defaults. Please make sure you know what you are doing by follow the [Hugo docs](https://gohugo.io/commands/hugo/).
 
 ## Examples
-https://github.com/serg/hugo-init
+[`hugo-init`](https://github.com/serg/hugo-init) - a Hugo minimal boilerplate.
 
 ## Thanks
 - To the [Brunch team](https://github.com/brunch/brunch/graphs/contributors) and all related contributors.
@@ -81,3 +81,5 @@ https://github.com/serg/hugo-init
 
 ## License
 MIT © [Sergey Furtak](https://sergfurtak.com)
+
+By using this plugin you understand the implications and guarantees of the [MIT license](https://github.com/serg/hugo-brunch/blob/master/LICENSE).
