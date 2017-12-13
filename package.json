@@ -1,14 +1,11 @@
 {
   "name": "hugo-brunch",
-  "version": "1.1.1",
-  "description": "Adds Hugo support to brunch.",
+  "version": "1.1.2",
+  "description": "Adds Hugo support to Brunch.",
   "author": "Sergey Furtak",
   "license": "MIT",
-  "homepage": "https://github.com/serg/hugo-brunch",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/serg/hugo-brunch.git"
-  },
+  "main": "index.js",
+  "repository": "serg/hugo-brunch",
   "keywords": [
     "brunch",
     "brunch-plugin",
