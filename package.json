@@ -1,6 +1,6 @@
 {
   "name": "hugo-brunch",
-  "version": "1.8.0",
+  "version": "1.9.0",
   "description": "Adds Hugo support to Brunch.",
   "author": "Sergey Furtak",
   "license": "MIT",
@@ -19,6 +19,6 @@
     "npm": ">= 3.10.10"
   },
   "dependencies": {
-    "hugo-bin": "^0.25.0"
+    "hugo-bin": "^0.26.0"
   }
 }
