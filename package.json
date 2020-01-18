@@ -19,6 +19,6 @@
     "npm": ">= 3.10.10"
   },
   "dependencies": {
-    "hugo-bin": "^0.27.0"
+    "hugo-bin": "^0.50.0"
   }
 }
