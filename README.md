@@ -50,7 +50,7 @@ module.exports = {
       outputFolder: 'public',
       executablePath: 'node_modules/hugo-bin/vendor/hugo',
       args: ['--buildDrafts','--buildFuture','--verbose'],
-      fileExtensions: ['html','ace','amber','toml','yaml','json','md',
+      fileExtensions: ['html','toml','yaml','json','md',
                       'svg','png','jpg','jpeg','ico','gif','webp',
                       'eot','ttf','woff','woff2',
                       'mp4','webm','ogg',
